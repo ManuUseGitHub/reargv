@@ -8,10 +8,50 @@ Reads command-line arguments and returns a structured, representative object.
 ## Installation
 
 ```bash
-npm install reargv
+$ npm install reargv
 ```
 
 ## Usage
+
+**Script pipeline**
+First, create a script file somewhere
+
+```js
+//argv.mjs
+
+import { reargv } from "reargv";
+
+console.log(JSON.stringify(reargv(), null, 2))
+```
+
+Then, run it and pass it commands
+
+```bash
+$ node ./argv.mjs hello --world reargv on.npm --and='this is great!' help VERSION -k8 -x > output.json
+```
+
+
+### Output
+(`(...) > output.json` in `output.json`)
+
+```js
+{
+    options: {
+      world: 'reargv',
+      and: '"this is great!"',
+      help: true,
+      version: true,
+      k: '8',
+      x: true
+    },
+    files: [ 'on.npm' ],
+    misc: [ 'hello' ]
+}
+```
+
+---
+
+**mocking process.argv**
 
 ```js
 import { reargv } from "reargv";
