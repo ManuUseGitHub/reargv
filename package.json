@@ -1,0 +1,15 @@
+{
+  "name": "reargv",
+  "version": "1.0.0",
+  "description": "Reads command arguments and gives a representative object of them",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "author": "Jean Luc Emmanuel VERHANNEMAN",
+  "type": "module",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^30.2.0"
+  }
+}
