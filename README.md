@@ -13,7 +13,8 @@ $ npm install reargv
 
 ## Usage
 
-**Script pipeline**
+### Script pipeline
+
 First, create a script file somewhere
 
 ```js
@@ -32,7 +33,7 @@ $ node ./argv.mjs hello --world reargv on.npm --and='this is great!' help VERSIO
 
 
 ### Output
-(`(...) > output.json` in `output.json`)
+(`(...) > output.json` to output in `output.json`)
 
 ```js
 {
@@ -51,7 +52,7 @@ $ node ./argv.mjs hello --world reargv on.npm --and='this is great!' help VERSIO
 
 ---
 
-**mocking process.argv**
+### Mocking process.argv
 
 ```js
 import { reargv } from "reargv";
@@ -115,4 +116,4 @@ console.log(argv);
 
 ## License
 
-[MIT © 2025](https://github.com/ManuUseGitHub/reargv?tab=MIT-1-ov-file#readme)
+[MIT](https://github.com/ManuUseGitHub/reargv?tab=MIT-1-ov-file#readme)
